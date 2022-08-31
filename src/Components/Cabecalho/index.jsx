@@ -28,7 +28,7 @@ const Logo = styled.img`
   width: 50px;
 `
 
-const Cabecalho = () => {
+export default function Cabecalho() {
   return (
     <StyledHeader>
       <Logo src={bank_logo} alt="Logo Smart Bank" />
@@ -43,5 +43,3 @@ const Cabecalho = () => {
     </StyledHeader>
   );
 };
-
-export default Cabecalho;

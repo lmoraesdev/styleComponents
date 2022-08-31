@@ -3,7 +3,7 @@ import React from "react";
 import Titulo from "../Titulo";
 import Conta from "../Conta";
 
-const Container = () => {
+export default function Container(){
   return (
     <div className="container">
       <Titulo>Olá Fulano!</Titulo>
@@ -13,5 +13,3 @@ const Container = () => {
     </div>
   );
 };
-
-export default Container;

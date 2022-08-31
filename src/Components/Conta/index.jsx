@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-
 import privado from "../../assets/images/privado.svg";
 import olho_icone from "../../assets/images/olho.svg";
 import dinheiro from "../../assets/images/dinheiro.svg";
 
-const Conta = () => {
+export default function Conta() {
   const [toggleState, untoggle] = useState(true);
-
   const toggleHandler = () => {
     untoggle((toggleState) => !toggleState);
   };
@@ -37,5 +35,3 @@ const Conta = () => {
     </div>
   );
 };
-
-export default Conta;
