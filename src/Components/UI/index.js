@@ -21,7 +21,7 @@ export const Box = styled.div`
   }
 `;
 
-export const Botão = styled.button`
+export const Botao = styled.button`
   margin: 15px auto 0px auto;
   display: block;
   border-radius: 20px;
