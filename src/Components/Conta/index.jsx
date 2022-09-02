@@ -6,10 +6,10 @@ import dinheiro from "../../assets/images/dinheiro.svg";
 import { Icone, Box, Botao, Saldo, Detalhe } from "../UI";
 
 const IconeMargin = styled(Icone)`
-  margin-top:2px
+  margin-top:2px;
 `;
 
-export default function Conta() {
+export default function Conta(){
   const [toggleState, untoggle] = useState(true);
   const toggleHandler = () => {
     untoggle((toggleState) => !toggleState);
@@ -18,7 +18,7 @@ export default function Conta() {
   return (
     <Box>
       <h2>Conta</h2>
-      <div style={{ fontSize: "26px", padding: "20px 0" }}>
+      <div key="conta" style={{ fontSize: "26px", padding: "20px 0" }}>
         Saldo disponível{" "}
         <span>
           <Icone src={dinheiro} alt="Ícone Saldo" />
