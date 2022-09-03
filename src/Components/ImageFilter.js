@@ -17,4 +17,5 @@ const fn = (type) => {
 
   return Images[type] || Images.default;
 };
+
 export default fn;
