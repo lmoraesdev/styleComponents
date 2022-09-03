@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Item from "../Item";
+import ImageFilter from "../ImageFilter";
 
-const WrapperItems = styled.div`
-  box-shadow: 4px 4px 20px 0 px rgb(0, 0, 0, 0.1);
+const Items = styled.div`
+  box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin: 2px 0;
   display: flex;
@@ -11,11 +12,16 @@ const WrapperItems = styled.div`
   justify-content: space-around;
   padding: 10px;
   font-size: 12px;
-`
-export default function Items(props){
-  return(
-    <WrapperItems >
-      <Item {...props}/>
-    </WrapperItems>
-  )
-}
+`;
+
+const fn = (props) => {
+  return (
+    <Items>
+      {ImageFilter(props.type)}
+      <Item {...props} />
+      <span>{props.date}</span>
+    </Items>
+  );
+};
+
+export default fn;

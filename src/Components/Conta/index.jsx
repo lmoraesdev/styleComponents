@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+
 import privado from "../../assets/images/privado.svg";
 import olho_icone from "../../assets/images/olho.svg";
 import dinheiro from "../../assets/images/dinheiro.svg";
-import { Icone, Box, Botao, Saldo, Detalhe } from "../UI";
+
+import { Icone, Box, Botao, Saldo, Detalhe } from "../../Components/UI";
 
 const IconeMargin = styled(Icone)`
-  margin-top:2px;
+  margin-top: 2px;
 `;
 
-export default function Conta(){
+const Conta = () => {
   const [toggleState, untoggle] = useState(true);
+
   const toggleHandler = () => {
     untoggle((toggleState) => !toggleState);
   };
@@ -18,7 +21,7 @@ export default function Conta(){
   return (
     <Box>
       <h2>Conta</h2>
-      <div key="conta" style={{ fontSize: "26px", padding: "20px 0" }}>
+      <div style={{ fontSize: "26px", padding: "20px 0" }}>
         Saldo disponível{" "}
         <span>
           <Icone src={dinheiro} alt="Ícone Saldo" />
@@ -39,3 +42,5 @@ export default function Conta(){
     </Box>
   );
 };
+
+export default Conta;

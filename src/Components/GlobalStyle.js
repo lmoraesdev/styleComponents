@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobolStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
 * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
